@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Book Antiqua", "Palatino Linotype", Palatino, Georgia, serif;
+  --color-linen: #fbf0e7;
+  --color-milk: #f4dfcb;
+  --color-leaf-soft: #e8c6a7;
+  --color-petal: #ead7c7;
+  --color-petal-strong: #954f72;
+  --color-sage: #c78655;
+  --color-emerald-50: #fff7f0;
+  --color-emerald-100: #f4dfcb;
+  --color-emerald-600: #a85d2d;
+  --color-emerald-700: #7b3f25;
+  --color-emerald-800: #4d2417;
+  --color-emerald-900: #2a1409;
+  --color-emerald-950: #1a0b04;
+  --color-stone-50: #fff8f2;
+  --color-stone-100: #f0dfd0;
+  --color-stone-500: #81624f;
+  --color-stone-600: #674533;
+  --color-stone-700: #4b2b1e;
+  --color-stone-950: #2a1409;
+  --color-amber-100: #ead7c7;
+  --color-amber-900: #954f72;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    font-family:
+      "Book Antiqua", "Palatino Linotype", Palatino, Georgia, serif;
+    background: #fbf0e7;
+  }
+
+  html {
+    min-width: 320px;
+    background: #fbf0e7;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background: #fbf0e7;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 0;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: rgba(149, 79, 114, 0.22);
+      color: #2a1409;
+  }
+
+  p,
+  li,
+  td,
+  th,
+  select,
+  button,
+  a,
+  span {
+    letter-spacing: 0;
+  }
+}
+
+@layer components {
+  .site-shell {
+    position: relative;
+    isolation: isolate;
+    overflow-x: clip;
+  }
+
+  .site-shell::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(251, 240, 231, 0.92) 0%,
+        rgba(251, 240, 231, 0.82) 260px,
+        rgba(255, 248, 242, 0.96) 62%,
+        rgba(244, 223, 203, 0.98) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(42, 20, 9, 0.14) 0%,
+        rgba(255, 255, 255, 0) 44%,
+        rgba(149, 79, 114, 0.12) 100%
+      ),
+      url("/assets/design/magnat-template/template-media-10-9ea3942f2a.png") right top / 54rem auto no-repeat;
+  }
+
+  .site-shell::after {
+    content: "";
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #2a1409, #954f72, transparent);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  @media (max-width: 720px) {
+    .site-shell::before {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(251, 240, 231, 0.96) 0%,
+          rgba(251, 240, 231, 0.92) 330px,
+          rgba(255, 248, 242, 0.98) 100%
+        ),
+        url("/assets/design/magnat-template/template-media-10-9ea3942f2a.png") 92% 72px / 22rem auto no-repeat;
+    }
+  }
+}

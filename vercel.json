@@ -1,0 +1,35 @@
+{
+  "framework": "vite",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist",
+  "installCommand": "pnpm install",
+  "headers": [
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/algorithm",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/audience-portrait",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sku-budget",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/demand-elasticity",
+      "destination": "/index.html"
+    }
+  ]
+}
