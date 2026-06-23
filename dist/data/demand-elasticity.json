@@ -1,0 +1,499 @@
+{
+  "id": "demand-elasticity",
+  "title": "Эластичность спроса Магнат",
+  "description": "Сценарная модель показывает, как изменение средней цены связано с ожидаемым объемом продаж и дневной выручкой.",
+  "source": "Эластичность/Магнат эластичность цены.xlsx",
+  "period": "2025-06-01 — 2026-05-31",
+  "overall": {
+    "elasticity": -1.9031875856180838,
+    "rSquared": 0.3367130979095588,
+    "impactPlus10": -0.16589263590882508,
+    "impactMinus10": 0.2220390614447867,
+    "assessment": "Эластичный спрос",
+    "basis": "регрессия ln(units) на ln(unit price)",
+    "text": "При +10% к цене модель ожидает снижение продаж примерно на 16.6%, а при -10% к цене - рост объема примерно на 22.2%."
+  },
+  "categories": [
+    {
+      "key": "icecream",
+      "title": "Мороженое Магнат",
+      "shortTitle": "Мороженое",
+      "source": "Эластичность/Магнат эластичность цены.xlsx",
+      "description": "Дневной sell-out бренда Магнат на Ozon за 12 месяцев.",
+      "period": "2025-06-01 — 2026-05-31",
+      "summary": {
+        "selectedSkus": 25,
+        "selectedBarcodes": 20,
+        "selectedCodes": 13,
+        "daysWithSales": 365,
+        "daysUsedInRegression": 365,
+        "totalUnits": 346417.0,
+        "totalRevenue": 65190246.03000005,
+        "averagePrice": 188.18431552146706,
+        "averageDiscount": 111.18351325137053,
+        "elasticity": -1.9031875856180838,
+        "rSquared": 0.3367130979095588,
+        "correlation": 0,
+        "impactPlus10": -0.16589263590882508,
+        "impactMinus10": 0.2220390614447867,
+        "interpretation": "Эластичность ниже -1: при повышении цены объем продаж заметно снижается, а промо-снижение цены может дать прирост штук."
+      },
+      "assessment": {
+        "label": "Эластичный спрос",
+        "reliability": "Модель средней устойчивости",
+        "text": "Модель показывает эластичный спрос: сценарии цены стоит оценивать вместе с маржинальностью и промо-календарем, особенно для SKU с крупной долей выручки."
+      },
+      "summaryRows": [
+        {
+          "label": "Период",
+          "value": "2025-06-01 — 2026-05-31"
+        },
+        {
+          "label": "SKU в выборке",
+          "value": 25,
+          "format": "number"
+        },
+        {
+          "label": "Дней в регрессии",
+          "value": 365,
+          "format": "number"
+        },
+        {
+          "label": "Продажи, шт",
+          "value": 346417.0,
+          "format": "number"
+        },
+        {
+          "label": "Выручка",
+          "value": 65190246.03000005,
+          "format": "currency"
+        },
+        {
+          "label": "Средняя цена",
+          "value": 188.18431552146706,
+          "format": "currency"
+        },
+        {
+          "label": "Средняя скидка",
+          "value": 111.18351325137053,
+          "format": "percentPoint"
+        },
+        {
+          "label": "Эластичность цены",
+          "value": -1.9031875856180838,
+          "format": "decimal"
+        },
+        {
+          "label": "R²",
+          "value": 0.3367130979095588,
+          "format": "decimal"
+        },
+        {
+          "label": "Эффект +10% цены",
+          "value": -0.16589263590882508,
+          "format": "percent"
+        },
+        {
+          "label": "Эффект -10% цены",
+          "value": 0.2220390614447867,
+          "format": "percent"
+        }
+      ],
+      "scenarioRows": [
+        {
+          "scenario": "База",
+          "priceChange": 0.0,
+          "newAveragePrice": 188.18431552146706,
+          "salesMultiplier": 1.0,
+          "expectedSalesChange": 0.0,
+          "expectedAnnualUnits": 346417.0,
+          "expectedDailyUnits": 949.0876712328767,
+          "businessReadout": "Текущий уровень",
+          "dailyRevenue": 178603.41378082207,
+          "marginPerUnit": null,
+          "dailyMargin": null
+        },
+        {
+          "scenario": "Цена -10%",
+          "priceChange": -0.1,
+          "newAveragePrice": 169.36588396932035,
+          "salesMultiplier": 1.2220390614447867,
+          "expectedSalesChange": 0.2220390614447867,
+          "expectedAnnualUnits": 423335.10554851865,
+          "expectedDailyUnits": 1159.822206982243,
+          "businessReadout": "Снижение цены, рост объема",
+          "dailyRevenue": 196434.3133327956,
+          "marginPerUnit": null,
+          "dailyMargin": null
+        },
+        {
+          "scenario": "Цена -20%",
+          "priceChange": -0.2,
+          "newAveragePrice": 150.54745241717364,
+          "salesMultiplier": 1.529107201527432,
+          "expectedSalesChange": 0.5291072015274321,
+          "expectedAnnualUnits": 529708.7294315285,
+          "expectedDailyUnits": 1451.2567929630918,
+          "businessReadout": "Снижение цены, сильный рост объема",
+          "dailyRevenue": 218483.0129837111,
+          "marginPerUnit": null,
+          "dailyMargin": null
+        },
+        {
+          "scenario": "Цена +10%",
+          "priceChange": 0.1,
+          "newAveragePrice": 207.0027470736138,
+          "salesMultiplier": 0.8341073640911749,
+          "expectedSalesChange": -0.16589263590882508,
+          "expectedAnnualUnits": 288948.97074637254,
+          "expectedDailyUnits": 791.6410157434864,
+          "businessReadout": "Повышение цены, падение объема",
+          "dailyRevenue": 163871.8649550476,
+          "marginPerUnit": null,
+          "dailyMargin": null
+        },
+        {
+          "scenario": "Цена +20%",
+          "priceChange": 0.2,
+          "newAveragePrice": 225.82117862576047,
+          "salesMultiplier": 0.7068108954454013,
+          "expectedSalesChange": -0.2931891045545987,
+          "expectedAnnualUnits": 244851.3099675096,
+          "expectedDailyUnits": 670.8255067603002,
+          "businessReadout": "Повышение цены, сильное падение объема",
+          "dailyRevenue": 151486.60658883402,
+          "marginPerUnit": null,
+          "dailyMargin": null
+        }
+      ],
+      "method": "Daily sell-out from sell_out_ozon; elasticity is estimated as ln(units) on ln(unit price)."
+    }
+  ],
+  "topSkus": [
+    {
+      "label": "Мороженое пинта Double, соленая карамель с кусочками настоящего шоколада, 310 г, Магнат",
+      "barcode": "4605922001348",
+      "code": "68376401",
+      "category": "Мороженое семейное, мультипаки",
+      "sellOutQty": 34602.0,
+      "revenue": 17457461.69999996,
+      "qtyShare": 0.0998853982339204,
+      "revenueShare": 0.2677925420309993,
+      "averagePrice": 504.5217530778556,
+      "averageDiscount": 15.74575660366461,
+      "daysWithSales": 363
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде шоколадный трюфель, 67 г, Магнат",
+      "barcode": "4605922004615",
+      "code": "67686927",
+      "category": "Мороженое порционное",
+      "sellOutQty": 82199.0,
+      "revenue": 10299149.009999925,
+      "qtyShare": 0.23728338967198492,
+      "revenueShare": 0.15798604296201527,
+      "averagePrice": 125.29530785045957,
+      "averageDiscount": 21.91696419664642,
+      "daysWithSales": 201
+    },
+    {
+      "label": "Мороженое пинта Double шоколадное, c кусочками настоящего шоколада, 310 г, Магнат",
+      "barcode": "4605922001355",
+      "code": "68375448",
+      "category": "Мороженое семейное, мультипаки",
+      "sellOutQty": 17177.0,
+      "revenue": 9343454.469999967,
+      "qtyShare": 0.0495847490163589,
+      "revenueShare": 0.1433259580842844,
+      "averagePrice": 543.9514740641537,
+      "averageDiscount": 13.567668975956586,
+      "daysWithSales": 363
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде, шоколадный трюфель, 72 г, Магнат",
+      "barcode": "4605922024309",
+      "code": "67686927",
+      "category": "Мороженое порционное",
+      "sellOutQty": 66512.0,
+      "revenue": 8291167.580000037,
+      "qtyShare": 0.19199981525156098,
+      "revenueShare": 0.12718417378244765,
+      "averagePrice": 124.65671728409967,
+      "averageDiscount": 21.865323249940296,
+      "daysWithSales": 162
+    },
+    {
+      "label": "Мороженое Магнат эскимо в шоколаде Манго-Красные ягоды 67 г | Мороженое эскимо в шоколаде, манг...",
+      "barcode": "4605922024286",
+      "code": "67752345",
+      "category": "Мороженое порционное",
+      "sellOutQty": 29821.0,
+      "revenue": 3943117.5899999803,
+      "qtyShare": 0.08608411250025258,
+      "revenueShare": 0.06048631244903403,
+      "averagePrice": 132.22620267596594,
+      "averageDiscount": 17.81157305254713,
+      "daysWithSales": 127
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде Манго-Красные ягоды 67 г, Магнат",
+      "barcode": "4605922004608",
+      "code": "67752345",
+      "category": "Мороженое порционное",
+      "sellOutQty": 28266.0,
+      "revenue": 3689410.8199999705,
+      "qtyShare": 0.08159530277093792,
+      "revenueShare": 0.05659452210537961,
+      "averagePrice": 130.52468761055582,
+      "averageDiscount": 22.20853675794219,
+      "daysWithSales": 236
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде, покрытое хрустящими орешками брюнетка, 74 г, Магнат",
+      "barcode": "4605922024279",
+      "code": "68634695",
+      "category": "Мороженое порционное",
+      "sellOutQty": 18177.0,
+      "revenue": 2308130.359999994,
+      "qtyShare": 0.05247144337604679,
+      "revenueShare": 0.03540606916773733,
+      "averagePrice": 126.98081971722472,
+      "averageDiscount": 20.870946800901944,
+      "daysWithSales": 225
+    },
+    {
+      "label": "Мороженое Магнат эскимо в шоколаде маскарпоне - голубика, 70 г, Эйфория",
+      "barcode": "4605922003229",
+      "code": "90002233",
+      "category": "Мороженое порционное",
+      "sellOutQty": 14091.0,
+      "revenue": 1916161.7899999975,
+      "qtyShare": 0.04067641022236207,
+      "revenueShare": 0.029393381781657887,
+      "averagePrice": 135.9847980980766,
+      "averageDiscount": 21.734584486551437,
+      "daysWithSales": 225
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде, покрытое хрустящими орешками брюнетка, 67 г, Магнат",
+      "barcode": "4605922004585",
+      "code": "68634695",
+      "category": "Мороженое порционное",
+      "sellOutQty": 10376.0,
+      "revenue": 1388094.2000000041,
+      "qtyShare": 0.029952340676121552,
+      "revenueShare": 0.02129297378876611,
+      "averagePrice": 133.77931765612993,
+      "averageDiscount": 16.872284117193296,
+      "daysWithSales": 138
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде крем-чиз соленая карамель GOLD 70 г , Магнат",
+      "barcode": "4605922004271",
+      "code": "90014916",
+      "category": "Мороженое порционное",
+      "sellOutQty": 10699.0,
+      "revenue": 1314375.6199999938,
+      "qtyShare": 0.030884742954300742,
+      "revenueShare": 0.02016215154940709,
+      "averagePrice": 122.850324329376,
+      "averageDiscount": 25.001058977474653,
+      "daysWithSales": 155
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде Магнат х Даниссимо сливочный 62 г, Магнат",
+      "barcode": "4605922048053",
+      "code": "90027676",
+      "category": "Мороженое порционное",
+      "sellOutQty": 9187.0,
+      "revenue": 1305832.0200000033,
+      "qtyShare": 0.02652006108245265,
+      "revenueShare": 0.02003109513345095,
+      "averagePrice": 142.139111788397,
+      "averageDiscount": 12.099284859039424,
+      "daysWithSales": 37
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде GOLD крем-чиз соленая карамель 65 г, Магнат",
+      "barcode": "4605922004561",
+      "code": "90014916",
+      "category": "Мороженое порционное",
+      "sellOutQty": 7399.0,
+      "revenue": 965133.970000001,
+      "qtyShare": 0.021358651567330703,
+      "revenueShare": 0.014804883073394975,
+      "averagePrice": 130.44113664008663,
+      "averageDiscount": 23.499155291255857,
+      "daysWithSales": 208
+    },
+    {
+      "label": "Мороженое монокап Соленая карамель 165 г, Магнат",
+      "barcode": "4605922046608",
+      "code": "90026563",
+      "category": "Мороженое порционное",
+      "sellOutQty": 2301.0,
+      "revenue": 685726.919999999,
+      "qtyShare": 0.006642283721641836,
+      "revenueShare": 0.010518857678255014,
+      "averagePrice": 298.0125684485002,
+      "averageDiscount": 29.137709691438825,
+      "daysWithSales": 34
+    },
+    {
+      "label": "Мороженое эскимо сливочное DUET, маракуйя - кокос и два шоколада, 70 г, Магнат",
+      "barcode": "4605922001539",
+      "code": "69706661",
+      "category": "Мороженое порционное",
+      "sellOutQty": 4283.0,
+      "revenue": 558667.9800000007,
+      "qtyShare": 0.012363711942543236,
+      "revenueShare": 0.008569809350664306,
+      "averagePrice": 130.438473032921,
+      "averageDiscount": 25.33603315433085,
+      "daysWithSales": 153
+    },
+    {
+      "label": "Мороженое Магнат эскимо в шоколаде маскарпоне - голубика, 65 г, Эйфория",
+      "barcode": "4605922004578",
+      "code": "90002233",
+      "category": "Мороженое порционное",
+      "sellOutQty": 3159.0,
+      "revenue": 401527.21,
+      "qtyShare": 0.009119067482254047,
+      "revenueShare": 0.006159314229543183,
+      "averagePrice": 127.10579613801836,
+      "averageDiscount": 24.45051598607157,
+      "daysWithSales": 138
+    },
+    {
+      "label": "Мороженое Магнат эскимо в шоколаде фисташка - малина, 65 г | Мороженое эскимо в шоколаде, фиста...",
+      "barcode": "4605922001256",
+      "code": "68862289",
+      "category": "Мороженое порционное",
+      "sellOutQty": 2662.0,
+      "revenue": 350754.20000000007,
+      "qtyShare": 0.007684380385489165,
+      "revenueShare": 0.005380470566694685,
+      "averagePrice": 131.76341096919612,
+      "averageDiscount": 24.196829451540193,
+      "daysWithSales": 120
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде фисташка - малина, 65 г, Магнат",
+      "barcode": "4605922004622",
+      "code": "68862289",
+      "category": "Мороженое порционное",
+      "sellOutQty": 1886.0,
+      "revenue": 268219.1500000004,
+      "qtyShare": 0.005444305562371361,
+      "revenueShare": 0.004114406162488912,
+      "averagePrice": 142.21588016967146,
+      "averageDiscount": 24.92461293743369,
+      "daysWithSales": 239
+    },
+    {
+      "label": "Мороженое эскимо DUBAI фисташка-катаифи 63 г, Магнат",
+      "barcode": "4605922043188",
+      "code": "90023039",
+      "category": "Мороженое порционное",
+      "sellOutQty": 1454.0,
+      "revenue": 239475.74999999994,
+      "qtyShare": 0.004197253598986193,
+      "revenueShare": 0.003673490507917323,
+      "averagePrice": 164.70134112792294,
+      "averageDiscount": 11.750694635488298,
+      "daysWithSales": 182
+    },
+    {
+      "label": "Мороженое пинта Double, соленая карамель с кусочками настоящего шоколада, 310 г, Магнат",
+      "barcode": "4605920000000",
+      "code": "68376401",
+      "category": "Мороженое семейное, мультипаки",
+      "sellOutQty": 268.0,
+      "revenue": 144189.19000000015,
+      "qtyShare": 0.0007736340883963547,
+      "revenueShare": 0.0022118215343695053,
+      "averagePrice": 538.0193656716424,
+      "averageDiscount": 42661.40421641791,
+      "daysWithSales": 2
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде шоколадный трюфель, 67 г, Магнат",
+      "barcode": "4605920000000",
+      "code": "67686927",
+      "category": "Мороженое порционное",
+      "sellOutQty": 583.0,
+      "revenue": 90989.73000000014,
+      "qtyShare": 0.0016829428116980402,
+      "revenueShare": 0.0013957568124244757,
+      "averagePrice": 156.07157804459715,
+      "averageDiscount": 32601.769108061737,
+      "daysWithSales": 2
+    },
+    {
+      "label": "Мороженое пинта Double шоколадное, c кусочками настоящего шоколада, 310 г, Магнат",
+      "barcode": "4605920000000",
+      "code": "68375448",
+      "category": "Мороженое семейное, мультипаки",
+      "sellOutQty": 150.0,
+      "revenue": 84174.85000000003,
+      "qtyShare": 0.0004330041539531836,
+      "revenueShare": 0.0012912184740223787,
+      "averagePrice": 561.1656666666669,
+      "averageDiscount": 322.3263999999993,
+      "daysWithSales": 2
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде Манго-Красные ягоды 67 г, Магнат",
+      "barcode": "4605920000000",
+      "code": "67752345",
+      "category": "Мороженое порционное",
+      "sellOutQty": 470.0,
+      "revenue": 59249.18000000001,
+      "qtyShare": 0.0013567463490533086,
+      "revenueShare": 0.0009088657216101629,
+      "averagePrice": 126.062085106383,
+      "averageDiscount": 24.468595744680954,
+      "daysWithSales": 2
+    },
+    {
+      "label": "Мороженое сливочное, рожок, фисташка, 72 г, Магнат",
+      "barcode": "4605922001584",
+      "code": "69749052",
+      "category": "Мороженое порционное",
+      "sellOutQty": 422.0,
+      "revenue": 50015.670000000035,
+      "qtyShare": 0.0012181850197882898,
+      "revenueShare": 0.0007672262807074427,
+      "averagePrice": 118.52054502369677,
+      "averageDiscount": 9.48011848341232,
+      "daysWithSales": 51
+    },
+    {
+      "label": "Мороженое эскимо в шоколаде, покрытое хрустящими орешками брюнетка, 67 г, Магнат",
+      "barcode": "4605920000000",
+      "code": "68634695",
+      "category": "Мороженое порционное",
+      "sellOutQty": 166.0,
+      "revenue": 20785.36999999999,
+      "qtyShare": 0.00047919126370818985,
+      "revenueShare": 0.00031884171737033695,
+      "averagePrice": 125.21307228915657,
+      "averageDiscount": 35.44656626506025,
+      "daysWithSales": 2
+    },
+    {
+      "label": "Мороженое Магнат эскимо в шоколаде маскарпоне - голубика, 65 г, Эйфория",
+      "barcode": "4605920000000",
+      "code": "90002233",
+      "category": "Мороженое порционное",
+      "sellOutQty": 40.0,
+      "revenue": 5173.009999999999,
+      "qtyShare": 0.00011546777438751563,
+      "revenueShare": 7.935251536893147e-05,
+      "averagePrice": 129.32524999999998,
+      "averageDiscount": 13882.646499999999,
+      "daysWithSales": 2
+    }
+  ]
+}
