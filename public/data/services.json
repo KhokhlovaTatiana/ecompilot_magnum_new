@@ -1,0 +1,38 @@
+[
+  {
+    "id": "algorithm",
+    "title": "Алгоритмы покупки",
+    "description": "Как покупатели выбирают продукты: альфа, бета, сигма и омега-сценарии.",
+    "path": "/algorithm",
+    "icon": "algorithm",
+    "status": "ready",
+    "source": "Алгоритм покупки/ERW_0710_1500_Р_Ардалионов.pdf"
+  },
+  {
+    "id": "audience-portrait",
+    "title": "Портрет аудитории",
+    "description": "Кто покупает Магнат на Ozon: другие покупки, товарные интересы и сценарии потребления.",
+    "path": "/audience-portrait",
+    "icon": "audience",
+    "status": "ready",
+    "source": "Портрет аудитории/reviews_magnat_202606182208.csv"
+  },
+  {
+    "id": "sku-budget",
+    "title": "SKU-бюджет",
+    "description": "Рекомендации по performance-бюджету для SKU Магнат на Ozon.",
+    "path": "/sku-budget",
+    "icon": "budget",
+    "status": "ready",
+    "source": "SKU-бюджет/Магнат_Расчет бюджета на Перформ.xlsx"
+  },
+  {
+    "id": "demand-elasticity",
+    "title": "Эластичность",
+    "description": "Сценарии изменения цены и ожидаемая реакция продаж Магнат.",
+    "path": "/demand-elasticity",
+    "icon": "elasticity",
+    "status": "ready",
+    "source": "Эластичность/Магнат эластичность цены.xlsx"
+  }
+]
